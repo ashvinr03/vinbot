@@ -3,6 +3,7 @@ import json
 from discord import member
 from discord.ext import commands
 
+
 class BaseCommands(commands.Cog):
 
     def __init__(self, bot):
@@ -11,7 +12,7 @@ class BaseCommands(commands.Cog):
     @commands.command()
     async def ping(self, ctx):
         await ctx.send('Pong!')
-    
+
     @commands.command()
     @commands.has_permissions(administrator=True)
     async def clear(self, ctx, amount=5):
@@ -76,8 +77,9 @@ class BaseCommands(commands.Cog):
             prefixes = json.load(x)
         prefixes[str(ctx.guild.id)] = prefix
         with open('prefixes.json', 'w') as x:
-            json.dump(prefixes, x, indent = 4)
+            json.dump(prefixes, x, indent=4)
         await ctx.send(f'Prefix changed to {prefix}')
+
 
 def setup(bot):
     bot.add_cog(BaseCommands(bot))

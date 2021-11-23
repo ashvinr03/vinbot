@@ -8,8 +8,9 @@ it features moderation commands, role modifications, event triggers, and an uniq
 
 test the bot in your server: https://discord.com/oauth2/authorize?client_id=901602355437522965&permissions=8&scope=bot
 
-some of the things I constantly practiced during the development of this bot:
+some of the things I learned and practiced during the development of this bot:
 - object oriented programming
 - discord.py API
-- hosting on remote servers
+- hosting from local server
 - python 3.9+
+- env setup/secrets
